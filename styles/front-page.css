@@ -19,7 +19,7 @@
   margin-bottom: 50px;
 }
 
-.row {
+.front-row {
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;

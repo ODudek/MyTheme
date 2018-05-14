@@ -27,4 +27,4 @@
             <?php the_excerpt()?>
             <?php endif;?>
         </div>
-        <!-- /.blog-post -->
+</div>

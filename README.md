@@ -14,4 +14,6 @@ Theme napisany od zera pod wordpress
 8. - [ ] - Zrobić animacje
 9. - [ ] - Zrobić style dla widoku postów
 10. - [ ] - Usunąć zawartość `blog-title` z `header.php`
-11. - [ ] - I duzo więcej!
+11. - [ ] - Podzielić style według `media` tak aby nie blokowały pobierania strony
+12. - [ ] - PWA!
+### I duzo więcej!

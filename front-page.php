@@ -17,7 +17,7 @@
 </section>
 <section class="boxes">
     <div class="container">
-        <div class="row">
+        <div class="front-row">
                 <?php if (is_active_sidebar('box1')): ?>
                 <?php dynamic_sidebar('box1')?>
                 <?php endif;?> 
