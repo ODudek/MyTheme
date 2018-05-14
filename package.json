@@ -1,0 +1,12 @@
+{
+  "name": "mytheme",
+  "version": "0.0.1",
+  "description": "Theme napisany od zera pod wordpress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aleksander Dudek",
+  "license": "ISC"
+}
