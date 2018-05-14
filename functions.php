@@ -3,10 +3,6 @@
 function my_theme_setup()
 {
     add_theme_support('post-thumbnails');
-    register_nav_menus(array(
-        'primary' => __('Primary Menu', 'mytheme'),
-    ));
-
     add_theme_support('post-formats', array('aside', 'gallery'));
 }
 
@@ -48,3 +44,5 @@ function my_init_widgets($id)
 }
 
 add_action('widgets_init', 'my_init_widgets');
+
+remove_filter('the_content', 'wpautop');

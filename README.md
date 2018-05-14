@@ -16,4 +16,8 @@ Theme napisany od zera pod wordpress
 10. - [ ] - Usunąć zawartość `blog-title` z `header.php`
 11. - [ ] - Podzielić style według `media` tak aby nie blokowały pobierania strony
 12. - [ ] - PWA!
+13. - [ ] - Dopracować funkcję `resize` do skalowania obrazków na karuzeli
+
+## Widget
+https://premium.wpmudev.org/blog/create-custom-wordpress-widget/
 ### I duzo więcej!

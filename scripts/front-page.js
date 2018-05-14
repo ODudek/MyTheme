@@ -11,6 +11,7 @@ $button.addEventListener("click", () => {
 });
 
 function fixUrl(url) {
-  const [newUrl, rubish] = url.split("#");
+  let indexOfHash = url.indexOf("#");
+  const newUrl = url.substr(0, indexOfHash);
   return newUrl;
 }

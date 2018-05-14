@@ -1,0 +1,61 @@
+.post-gallery-container {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery-title {
+  text-align: center;
+}
+
+.gallery {
+  height: 400px;
+}
+
+.gallery img {
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: 400px;
+  animation: slide .3s linear forwards;
+}
+
+@keyframes slide {
+  from {
+    height: 0;
+    width: 0;
+  }
+  to {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.arrows {
+  font-size: 40px !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow {
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
