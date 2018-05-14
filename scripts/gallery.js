@@ -47,10 +47,6 @@ class Gallery {
     return element === null ? (isNull = true) : (isNull = false);
   }
 
-  addAnimation(element) {
-    element.style.animation = "slide 1s ease 0.1s forwards;";
-  }
-
   leftHandler() {
     let currentImage = $galleryContainer.querySelector(
       `[index="${this.currentImageIndex}"]`

@@ -15,19 +15,20 @@
 .gallery img {
   margin: 0 auto;
   width: auto;
-  max-width: 100%;
+  max-width: 85%;
   height: 400px;
-  animation: slide .3s linear forwards;
+  animation: slideLeft 0.3s linear forwards;
+  overflow: hidden;
 }
 
-@keyframes slide {
+@keyframes slideLeft {
   from {
-    height: 0;
-    width: 0;
+    padding-left: 500px;
+    opacity: 0;
   }
   to {
-    height: 100%;
-    width: auto;
+    padding-left: 0;
+    opacity: 1;
   }
 }
 
