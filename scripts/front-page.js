@@ -37,10 +37,16 @@ const homePage = () => {
 function renderHeader(title, content, container) {
   let $h1 = document.createElement("h1");
   $h1.textContent = title;
+  $h1.classList.add("marginless");
   container.appendChild($h1);
   let $p = document.createElement("p");
   $p.textContent = content;
   container.appendChild($p);
+}
+
+function displayFooter() {
+  const $p = document.querySelector(".blog-footer p");
+  $p.classList.add("marginless");
 }
 
 homePage();

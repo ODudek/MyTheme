@@ -1,16 +1,16 @@
 <?php get_template_part('header');?>
-<section class="showcase">
+<section class="showcase center-text">
     <div class="container">
         <div class="loader">
         <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
         <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <button class="button"> Przejdz do bloga </button>
+    <button class="button line-hover"> Przejdz do bloga </button>
 </section>
-<section class="boxes">
+<section class="boxes center-text">
     <div class="container">
-        <div class="front-row">
+        <div class="front-row flexbox">
                 <?php if (is_active_sidebar('box1')): ?>
                 <?php dynamic_sidebar('box1')?>
                 <?php endif;?>

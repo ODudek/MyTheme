@@ -1,22 +1,21 @@
 <div class="blog-post">
-	            <h2 class="blog-post-title">
+	            <h2 class="blog-post-title marginless">
                     <?php if (is_single()): ?>
                     <?php the_title()?>
                     <?php else: ?>
-                <link href="<?php bloginfo('template_url');?>/styles/posts.css" rel="stylesheet">
-                    <a href="<?php the_permalink();?>">
+                    <a href="<?php the_permalink();?>" class="yellow-hover">
                         <?php the_title()?>
                     </a>
                     <?php endif;?>
                 </h2>
-	            <p class="blog-post-meta">
+	            <p class="blog-post-meta marginless right">
 	                <?php the_time('F j, Y g:i a')?> by
 	                <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
 	                    <?php the_author()?>
 	                </a>
 	            </p>
 	            <?php if (has_post_thumbnail()): ?>
-	              <div class="post-thumb">
+	              <div class="post-thumb auto-margin">
 	                <?php the_post_thumbnail();?>
 	              </div>
                 <?php endif;?>
@@ -27,8 +26,8 @@
                 <div class="content">
                 <?php the_excerpt()?>
                 </div>
-            <div class="more">
-            <a href="<?php the_permalink();?>">
+            <div class="more line-hover right">
+            <a href="<?php the_permalink();?>" class="yellow-hover">
                 Zobacz więcej
             </a>
             </div>

@@ -1,29 +1,19 @@
 .blog-post {
-  margin: 0 auto;
+  margin: 50px auto;
   width: 80%;
   height: auto;
-  margin-bottom: 20px;
 }
 
 .blog-post-title {
   background: var(--dark);
   padding: 20px;
-  margin: 0;
 }
 
 .blog-post-title a {
   text-decoration: none;
-  color: var(--light);
-  transition: all 0.2s ease-in-out;
-}
-
-.blog-post-title a:hover {
-  color: var(--yellow);
 }
 
 .blog-post-meta {
-  margin: 0;
-  float: right;
   padding: 10px;
 }
 
@@ -31,50 +21,29 @@
   padding: 30px 10px 10px 10px;
 }
 
-.post-thumb {
-  margin: 0 auto;
-}
-
 .post-thumb img {
-  padding-top: 10px;    
+  padding-top: 10px;
   width: 100%;
   height: auto;
 }
 
 .blog-post-meta a {
-  text-transform: uppercase;
-  text-decoration: none;
   color: var(--red);
 }
 
 .blog-post .more a {
-  text-decoration: none;
   color: var(--dark);
-  transition: all 0.2s ease-in-out;
+}
+
+.blog-post .more a:hover {
+  color: var(--yellow);  
 }
 
 .blog-post .more {
   position: relative;
 }
 
-.blog-post .more a:hover {
-  color: var(--yellow);
-}
-
-.blog-post .more a:before {
-  content: "";
-  position: absolute;
-  width: 10%;
-  height: 1px;
+.blog-post .more:before {
   bottom: -5px;
-  left: 0;
-  background-color: var(--yellow);
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.2s ease-in-out 0s;
-}
-
-.blog-post .more a:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
+  width: 100px;
 }
