@@ -21,8 +21,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --dark: #333741;
   --red: #d75749;
 }
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
   margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  display: table;
+}
+
+.loader {
+  height: 150px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
 }

@@ -34,5 +34,5 @@ class Resize {
   }
 }
 
-new Resize(document.querySelector(".post-thumb > img"), 500, 500);
-console.log(document.querySelector(".post-thumb > img"));
+// new Resize(document.querySelector(".post-thumb > img"), 500, 500);
+// console.log(document.querySelector(".post-thumb > img"));

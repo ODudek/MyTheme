@@ -9,12 +9,17 @@
     <link rel="icon" href="../../favicon.ico">
     <title><?php bloginfo('name');?> |
     <?php is_front_page() ? bloginfo('description') : wp_title();?></title>
-    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-    <link href="<?php bloginfo('template_url');?>/styles/layout.css" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">    
+    <?php if (is_front_page()): ?>
     <link href="<?php bloginfo('template_url');?>/styles/footer.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url');?>/styles/header.css" rel="stylesheet">    
     <link href="<?php bloginfo('template_url');?>/styles/front-page.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url');?>/styles/gallery.css" rel="stylesheet">    
+    <?php else:?>    
+    <link href="<?php bloginfo('template_url');?>/styles/layout.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url');?>/styles/footer.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url');?>/styles/header.css" rel="stylesheet">    
+    <link href="<?php bloginfo('template_url');?>/styles/gallery.css" rel="stylesheet">  
+    <?php endif;?>    
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <?php wp_head();?>
   </head>
