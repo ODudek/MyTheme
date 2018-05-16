@@ -2,7 +2,7 @@ const $button = document.querySelector("button");
 const $container = document.querySelector(".u-showcase > .u-container");
 const $loader = document.querySelector(".u-loader");
 
-$button.addEventListener("click", () => {
+function buttonHandler() {
   let currentUrl = window.location.href;
   if (currentUrl.includes("#")) {
     let newUrl = fixUrl(currentUrl);
@@ -10,7 +10,7 @@ $button.addEventListener("click", () => {
   } else {
     window.location.href += "blog";
   }
-});
+}
 
 function fixUrl(url) {
   let indexOfHash = url.indexOf("#");
@@ -45,4 +45,9 @@ function renderHeader(title, content, container) {
   container.appendChild($p);
 }
 
-homePage();
+function setup() {
+  $button.addEventListener("click", buttonHandler);
+  window.addEventListener("DOMContentLoaded", homePage);
+}
+
+setup();
