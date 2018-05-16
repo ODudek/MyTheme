@@ -1,6 +1,6 @@
 const $button = document.querySelector("button");
-const $container = document.querySelector(".showcase > .container");
-const $loader = document.querySelector(".loader");
+const $container = document.querySelector(".u-showcase > .u-container");
+const $loader = document.querySelector(".u-loader");
 
 $button.addEventListener("click", () => {
   let currentUrl = window.location.href;
@@ -37,16 +37,12 @@ const homePage = () => {
 function renderHeader(title, content, container) {
   let $h1 = document.createElement("h1");
   $h1.textContent = title;
-  $h1.classList.add("marginless");
+  $h1.classList.add("u-margin-less");
   container.appendChild($h1);
   let $p = document.createElement("p");
+  $p.classList.add("u-margin-bottom-small");
   $p.textContent = content;
   container.appendChild($p);
-}
-
-function displayFooter() {
-  const $p = document.querySelector(".blog-footer p");
-  $p.classList.add("marginless");
 }
 
 homePage();

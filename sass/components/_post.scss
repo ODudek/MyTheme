@@ -1,0 +1,60 @@
+.blog-post {
+  margin: 5rem auto;
+  margin-bottom: 10rem;
+  width: 60%;
+  height: auto;
+  color: $dark;
+  position: relative;
+  font-size: $default-font-size;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -3rem;
+    left: 20%;
+    background: $green;
+    height: 0.1rem;
+    width: 80%;
+  }
+  .post-title {
+    padding: 2.5rem 0 0 4rem;
+    font-size: 2rem;
+    color: $green;
+  }
+
+  .post-content {
+    margin: 3rem 3rem 5rem 16rem;
+  }
+
+  .post-date {
+    background: $red;
+    color: $light;
+    padding: 2rem;
+    top: 1rem;
+  }
+
+  .post-header {
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+  }
+
+  .post-author {
+    margin-left: auto;
+    display: inline-flex;
+    padding: 3rem;
+    p {
+      margin-right: 1rem;
+    }
+  }
+  .post-options {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: $dark;
+    }
+    a:hover {
+      color: $yellow;
+    }
+  }
+}

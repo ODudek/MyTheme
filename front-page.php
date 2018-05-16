@@ -1,27 +1,35 @@
 <?php get_template_part('header');?>
-<section class="showcase center-text">
-    <div class="container">
-        <div class="loader">
+<section class="u-showcase u-margin-bottom-medium u-center-text">
+    <div class="u-container">
+        <div class="u-loader">
         <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
         <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <button class="button line-hover"> Przejdz do bloga </button>
+    <button class="btn"> Przejdz do bloga </button>
 </section>
-<section class="boxes center-text">
-    <div class="container">
-        <div class="front-row flexbox">
-                <?php if (is_active_sidebar('box1')): ?>
+<section class="boxes u-center-text u-margin-bottom-medium">
+        <div class="row">
+        <div class="col-1-of-3 box">
+        <?php if (is_active_sidebar('box1')): ?>
                 <?php dynamic_sidebar('box1')?>
                 <?php endif;?>
-                <?php if (is_active_sidebar('box2')): ?>
+                
+               
+            </div>
+            <div class="col-1-of-3 box">
+            <?php if (is_active_sidebar('box2')): ?>
                 <?php dynamic_sidebar('box2')?>
                 <?php endif;?>
-                <?php if (is_active_sidebar('box3')): ?>
+            </div>
+            <div class="col-1-of-3 box">
+            <?php if (is_active_sidebar('box3')): ?>
                 <?php dynamic_sidebar('box3')?>
                 <?php endif;?>
+            </div>
+                
         </div>
-    </div>
+
 </section>
 <script src="<?php echo get_bloginfo('template_url'); ?>/scripts/front-page.js" defer> </script>
 <?php get_template_part('footer')?>

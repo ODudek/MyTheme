@@ -1,0 +1,28 @@
+.blog-footer {
+  padding: 3rem;
+  background: $dark;
+  color: $light;
+  i {
+    font-size: 3rem !important;
+  }
+  .social-media {
+    a {
+      color: $light;
+      padding-right: 0.5rem;
+      height: 3rem;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  .blog-author {
+    align-self: auto;
+  }
+  .go-top {
+    &:before {
+      width: 230%;
+      left: -1.5rem;
+      bottom: -2.3rem;
+    }
+  }
+}

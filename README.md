@@ -1,6 +1,11 @@
 # My theme 
 
 Theme napisany od zera pod wordpress
+## How to use
+
+```
+$ npm run compile:sass      # Compile sass to css
+```
 
 ## TODO
 

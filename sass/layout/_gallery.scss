@@ -1,0 +1,44 @@
+.post-gallery-container {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery {
+  height: 40rem;
+  img {
+    margin: 0 auto;
+    width: auto;
+    height: 40rem;
+    max-width: 85%;
+    animation: show 0.2s linear forwards;
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.arrows {
+  font-size: 4rem !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  .arrow {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $yellow;
+    }
+  }
+}

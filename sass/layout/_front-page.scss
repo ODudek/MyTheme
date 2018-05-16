@@ -1,0 +1,36 @@
+.u-showcase {
+  height: 60rem;
+  padding: 10rem 2rem;
+  border-bottom: #ccc 0.1rem solid;
+  color: $light;
+  background: #333 url("./img/showcase.jpg") no-repeat center center;
+  h1 {
+    font-size: 5.5rem;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+
+.boxes {
+  color: $light;
+}
+
+.box {
+  background: $green;
+  padding: 1rem;
+  .fa {
+    font-size: 4.5rem !important;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  li {
+    display: inline;
+  }
+}
