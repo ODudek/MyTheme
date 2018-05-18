@@ -4,7 +4,7 @@ function goTop() {
     document.documentElement.scrollTop || document.body.scrollTop;
   if (currentScroll > 0) {
     startAnimation(goTop);
-    stopAnimation(startAnimation(goTop));    
+    stopAnimation(startAnimation(goTop));
     window.scrollTo(0, currentScroll - currentScroll / 500);
   }
 }
