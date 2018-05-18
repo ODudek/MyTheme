@@ -18,7 +18,7 @@
         </a>
     </div>
 </footer>
-<script src="<?php echo get_bloginfo('template_url'); ?>/scripts/router.js"></script>
+<script type="module" src="<?php echo get_bloginfo('template_url'); ?>/scripts/router.js"></script>
 <script src="<?php echo get_bloginfo('template_url'); ?>/scripts/footer.js" defer> </script>
 <?php wp_footer();?>
 </body>

@@ -6,7 +6,7 @@
         <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <button class="btn"> Przejdz do bloga </button>
+    <my-router href="" class="btn"> Przejdz do bloga </my-router>
 </section>
 <section class="boxes u-center-text u-margin-bottom-medium">
         <div class="row">

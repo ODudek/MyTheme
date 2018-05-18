@@ -40,3 +40,13 @@ function my_init_widgets($id)
 add_action('widgets_init', 'my_init_widgets');
 
 remove_filter('the_content', 'wpautop');
+
+function learningWordPress_resources()
+{
+    wp_localize_script('main_js', 'Data', array(
+        'noonce' => wp_create_nonce('wp_rest'),
+        'url' => get_site_url(),
+    ));
+}
+
+add_action('wp_enqueue_scripts', 'learningWordPress_resources');

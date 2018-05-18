@@ -1,21 +1,49 @@
-"http://localhost:8888/wordpress/2018/05/14/kolejny-test/";
-const $linkList = document.querySelectorAll("a");
-let $linkArray = Array.from($linkList);
-let filteredList = $linkArray.filter(link => link.href);
-let finalArray = filteredList.slice(0, filteredList.length - 2);
-let $container = document.querySelector(".container");
+import postTemplate from "../templates/post.js";
+let post = document.querySelector(".blog-post");
 
-finalArray.forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    fetch(link.href)
-      .then(res => res.text())
-      .then(date => {
+class MyRouter extends HTMLElement {
+  set href(link) {
+    this.setAttribute("href", link);
+  }
+
+  get href() {
+    return this.getAttribute("href");
+  }
+
+  clickHandler(event) {
+    event.preventDefault();
+    let path = event.target.href;
+    window.location.hash = path;
+    fetch(`/wordpress/wp-json/wp/v2/${path}`)
+      .then(res => res.json())
+      .then(data => {
         let parser = new DOMParser();
-        let htmlDoc = parser.parseFromString(date, "text/html");
-        let content = htmlDoc.querySelector(".post");
-        $container.innerHTML = "";
-        $container.appendChild(content);
+        let html = parser.parseFromString(postTemplate(data), "text/html");
+        let blog = html.querySelector("blog-post");
+        console.log(blog);
+        post.innerHTML = blog.innerHTML;
       });
-  });
-});
+  }
+
+  createdCallback() {
+    this.routes = document.querySelectorAll("my-router");
+  }
+
+  attachedCallback() {
+    Array.from(this.routes).forEach(route => {
+      route.addEventListener("click", this.clickHandler);
+    });
+  }
+}
+
+document.registerElement("my-router", MyRouter);
+// (async () => {
+//   const res = await fetch(Data.url + "/templates/post.html", {
+//     method: "get",
+//     headers: new Headers({
+//       "X-WP-Nonce": Data.noonce
+//     })
+//   });
+//   const textTemplate = await res.text();
+//   console.log(textTemplate);
+// })();

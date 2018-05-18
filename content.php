@@ -15,9 +15,9 @@
                     </div>
                     <div class="post-author">
                         <p class="u-margin-less">Autor: </p>
-                    <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+                    <my-router href="posts?author=<?php echo get_the_author_meta('ID') ?>">
 	                    <?php the_author()?>
-	                </a>
+	                </my-router>
                     </div>
                 </div>
                 <div class="post-content">
@@ -31,9 +31,9 @@
                 <i class="fa fa-download" aria-hidden="true"></i>
                         Zapisz do czytania w trybie offline
                     </a>
-                    <a href="<?php the_permalink();?>" class="line-hover">
+                    <my-router href="posts/<?php the_ID(); ?>" class="line-hover">
                     Zobacz więcej
-                    </a>
+                    </my-router>
 
                 </div>
                 </div>
